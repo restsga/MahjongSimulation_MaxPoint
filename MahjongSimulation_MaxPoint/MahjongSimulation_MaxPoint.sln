@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MahjongSimulation_MaxPoint", "MahjongSimulation_MaxPoint\MahjongSimulation_MaxPoint.pyproj", "{B2143BAC-4A76-467C-824F-6599A595D94D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2143BAC-4A76-467C-824F-6599A595D94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2143BAC-4A76-467C-824F-6599A595D94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19D0A526-90CC-4E2B-A283-6ADF5A430503}
+	EndGlobalSection
+EndGlobal
