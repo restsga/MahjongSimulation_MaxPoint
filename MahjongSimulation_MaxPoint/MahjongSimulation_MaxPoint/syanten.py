@@ -19,9 +19,7 @@ SYANTEN_TABLE=list([
 #シャンテン数計算
 def Syanten(hand_list):
     #手札を枚数形式に変換
-    hand_count_root=[0]*(9*3+7)
-    for card in hand_list:
-        hand_count_root[card//4]+=1
+    hand_count_root=HandToCount(hand_list)
 
     #シャンテン数
     syanten=8
@@ -142,3 +140,41 @@ def HandAnalyze(hand_count,table,depth):
     #分解不可
     return False
 
+#19字
+CARD_19JI=list([
+    9*0,9*0+8,
+    9*1,9*1+8,
+    9*2,9*2+8,
+    27,28,29,30,31,32,33])
+
+#国士無双
+def Syanten_Kokushi(hand_list):
+    #手札を枚数形式に変換
+    hand_count=HandToCount(hand_list)
+    #雀頭フラグ
+    head_flag=False
+    #シャンテン数
+    syanten=13
+    #探索
+    for id in CARD_19JI:
+        #1枚以上存在
+        if hand_count[id]>=1:
+            #シャンテン数を減らす
+            syanten-=1
+            #2枚以上存在
+            if hand_count[id]>=2:
+                #雀頭フラグを立てる
+                head_flag=True
+    #雀頭
+    if head_flag:
+        syanten-=1
+    return syanten
+
+#枚数形式に変換
+def HandToCount(hand_list):
+    #手札を枚数形式に変換
+    hand_count=[0]*(9*3+7)
+    for card in hand_list:
+        hand_count[card//4]+=1
+
+    return hand_count
